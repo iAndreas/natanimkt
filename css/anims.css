@@ -165,8 +165,8 @@
 }
 
 .jello {
-	-webkit-animation: jello 0.9s 1s both;
-	animation: jello 0.9s 1s both;
+	-webkit-animation: jello 0.9s 1.5s both;
+	animation: jello 0.9s 1.5s both;
 }
 
 /**

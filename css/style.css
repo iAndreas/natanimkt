@@ -8,7 +8,7 @@ html, body {
     width:100%;
     margin:0;
     padding:0;
-    /* overflow-x: hidden; */
+    color: #FCFFFF;
 }
 
 .container {
@@ -18,8 +18,12 @@ html, body {
     overflow: hidden;
  }
 
- .sobre {
+ .me, .about, .contact {
     display: none;
+ }
+
+ .about {
+    background-color: #C7057C;
  }
 
  .lpink {
@@ -41,7 +45,153 @@ svg {
     left: 5%;
     top: 10%;
     z-index: 2;
-    color: #FCFFFF;
     font-family: Nimbus;
     font-weight: lighter;
+}
+
+.about-text {
+    font-size: 4vw;
+    position: absolute;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    top: 25%;
+    left: 10%;
+    z-index: 4;
+    font-family: Nimbus;
+    font-weight: lighter;
+    text-align: justify;
+}
+
+.work-title {
+    text-align: center;
+    font-size: 7vw;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    top: 130%;
+    left: -10%;
+    z-index: 3;
+    font-family: Nimbus;
+    font-weight: lighter;
+}
+
+.me-title {
+    font-size: 11.5vw;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    top: 5%;
+    z-index: 4;
+    font-family: Nimbus;
+    font-weight: lighter;
+}
+
+.right-text {
+    text-align: right; 
+    margin-right: 20%;
+}
+
+.left-text {
+    text-align: left; 
+    margin-left: 20%;
+}
+
+@media (min-width:961px) {
+    .me-title {
+        font-size: 5vw;
+    }
+    
+    .work-title {
+        text-align: center;
+        font-size: 2vw;
+    }
+
+    .right-text {
+        margin-right: 30%;
+    }
+
+    .left-text {
+        margin-left: 30%;
+    }
+
+    .me-title {
+        top: 2%;
+    }
+
+    .about-text {
+        font-size: 1vw;
+    }
+}
+
+#picture {
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.downArrow{
+	position: fixed;
+	left: 50%;
+    bottom: 0;
+    z-index: 4;
+    color: #C7057C;
+}
+.bounce {
+	-moz-animation: bounce 3s infinite;
+	-webkit-animation: bounce 3s infinite;
+	animation: bounce 3s infinite;
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
 }

@@ -25,11 +25,13 @@ $(document).ready(function () {
         $("bubble-element").last().children().addClass("slide-out-right");
         $("abs1-element").first().children().addClass("slide-out-right");
         $("flower-element").children().addClass("slide-out-right");
-        $("twink3-element").last().children().addClass("slide-out-right");
 
-        $(".loading-title").addClass("slide-out-left");
         $("bubble-element").first().children().addClass("slide-out-left");
         $("abs1-element").last().children().addClass("slide-out-left");
-        $("twink3-element").first().children().addClass("slide-out-left");
+        $(".loading-title").addClass("slide-out-left");
+        setTimeout(function () {
+            $(".loading").remove();
+            $(".me, .about, .contact").fadeIn("slow");
+        }, 1000);
     }, 4000);
 });
