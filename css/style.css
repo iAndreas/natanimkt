@@ -9,6 +9,7 @@ html, body {
     margin:0;
     padding:0;
     color: #FCFFFF;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -18,11 +19,11 @@ html, body {
     overflow: hidden;
  }
 
- .me, .about, .contact {
+ #me, #about, #contact {
     display: none;
  }
 
- .about {
+ #about {
     background-color: #C7057C;
  }
 
@@ -50,7 +51,7 @@ svg {
 }
 
 .about-text {
-    font-size: 4vw;
+    font-size: 6vw;
     position: absolute;
     margin: 0 auto;
     width: 80%;
@@ -58,8 +59,8 @@ svg {
     top: 25%;
     left: 10%;
     z-index: 4;
-    font-family: Nimbus;
-    font-weight: lighter;
+    font-family: "League Spartan", system-ui;
+    font-weight: 600;
     text-align: justify;
 }
 
@@ -77,7 +78,7 @@ svg {
     font-weight: lighter;
 }
 
-.me-title {
+.title {
     font-size: 11.5vw;
     position: absolute;
     margin: 0 auto;
@@ -87,26 +88,89 @@ svg {
     z-index: 4;
     font-family: Nimbus;
     font-weight: lighter;
+    max-height: 375px;
 }
 
 .right-text {
+    text-align: right; 
+    margin-right: 15%;
+}
+
+.me-right-text {
     text-align: right; 
     margin-right: 20%;
 }
 
 .left-text {
     text-align: left; 
+    margin-left: 15%;
+}
+
+.me-left-text {
+    text-align: left; 
     margin-left: 20%;
 }
 
-@media (min-width:961px) {
-    .me-title {
+.highlight {
+    background-color: #FF50BB;
+    padding: 0px 3px;
+    border-radius: 25px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.contact-links {
+    position: relative;
+    left: -10%;
+    top: 45%;
+    width: 100%;
+    height: 30%;
+}
+
+.icon-link {
+    text-align: center;
+    font-size: 5vw;
+    position: absolute;
+    margin: 0 auto;
+    height: auto;
+    top: 25%;
+    z-index: 5;
+    font-family: "League Spartan", system-ui;
+    font-weight: 600;
+    max-height: 375px;
+}
+
+#link-1 {
+    left: 30%;
+}
+
+#link-2 {
+   left: 65%;
+}
+
+.icon {
+    width: 50px;
+}
+
+@media (min-width:961px) and (orientation: landscape) {
+    .title {
         font-size: 5vw;
+        top: 2%;
     }
     
     .work-title {
         text-align: center;
         font-size: 2vw;
+    }
+
+    .me-right-text {
+        margin-right: 40%;
+    }
+
+    .me-left-text {
+        margin-left: 40%;
     }
 
     .right-text {
@@ -117,12 +181,31 @@ svg {
         margin-left: 30%;
     }
 
-    .me-title {
-        top: 2%;
+    .about-text {
+        font-size: 2vw;
+        top: 50%;
     }
 
-    .about-text {
-        font-size: 1vw;
+    .contact-links {
+        top: 55%;
+    }
+
+    .icon-link {
+        font-size: 2vw;
+    }
+
+    #link-1 {
+         left: 50%;
+    }
+
+    #link-2 {
+        left: 61%;
+    }
+}
+
+@media (min-width:961px) and (orientation: portrait) {
+    .icon {
+        width: 100px;
     }
 }
 
@@ -136,62 +219,21 @@ svg {
 }
 
 .downArrow{
-	position: fixed;
+	position: absolute;
 	left: 50%;
-    bottom: 0;
+    bottom: 0%;
     z-index: 4;
     color: #C7057C;
 }
-.bounce {
-	-moz-animation: bounce 3s infinite;
-	-webkit-animation: bounce 3s infinite;
-	animation: bounce 3s infinite;
+
+.dark {
+    color: #C7057C;
 }
-@-moz-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -moz-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
+
+.light {
+    color: #FF78CB;
 }
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-}
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
+
+a {
+    color: inherit;
 }

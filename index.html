@@ -3,20 +3,33 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Natani MKT</title>
+		<title>Nati MKT</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script type="module" src="./js/main.js" defer></script>
+		<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/anims.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 	</head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-20ZMPZC0ZD"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-20ZMPZC0ZD');
+	</script>
 	<body class="lpink">
         <div class="container loading start">
 			<div class="loading-title">
 				<span class="ltitle">Quer fazer<br/>seu negócio<br/></span>
-				<twink3-element anim="fade-in jello" color="#FF50BB" width="8vw" height="10vw" css="--r: rotate(-52deg); position: relative; left: 6vw; top: 6vw; transform: var(--r)"></twink3-element>
+				<twink3-element anim="fade-in jello" color="#FF50BB" width="8vw" height="10vw" css="--t: 1.5s; --r: rotate(-52deg); position: relative; left: 6vw; top: 6vw; transform: var(--r)"></twink3-element>
 				<span class="ltitle fade-in">florescer?</span>
-				<twink3-element anim="fade-in jello" color="#C7057C" width="8vw" height="10vw" css="--r: rotate(140deg); position: relative; left: -6vw; top: -4vw; transform: var(--r)"></twink3-element>
+				<twink3-element anim="fade-in jello" color="#C7057C" width="8vw" height="10vw" css="--t: 1.5s; --r: rotate(140deg); position: relative; left: -6vw; top: -4vw; transform: var(--r)"></twink3-element>
 			</div>
             <bubble-element color="#C7057C" width="140%" height="140%" style="--r:rotate(-170deg); left: -75%; top: -40%; transform: var(--r)"></bubble-element>
 			<abs1-element width="40%" height="40%" style="left: 75%; top: -18%;"></abs1-element>
@@ -31,8 +44,8 @@
             <twink2-element></twink2-element>
             <woosh-element></woosh-element> -->
         </div>
-		<div class="container me">
-			<div class="me-title">
+		<div class="container" id="me">
+			<div class="title">
 				<div class="left-text">Natani</div>
 				<div class="right-text">Fedêncio</div>
 			</div>
@@ -46,20 +59,34 @@
 			<lines-element width="40%" height="40%" style="left: 80%; top: -15%; z-index: 3;"></lines-element>
 			<lines-element width="40%" height="40%" style="left: -10%; top: 85%; z-index: 3;"></lines-element>
 
-			<div class="downArrow bounce"><i class="fa-solid fa-chevron-down"></i></div>
+			<a href="#about"><div class="downArrow bounce dark"><i class="fa-solid fa-chevron-down"></i></div></a>
 		</div>
-		<div class="container about">
+		<div class="container" id="about">
 			<woosh-element width="170%" height="170%" style="left: -20%; top: -40%;"></woosh-element>
-			<div class="me-title">
-				<div class="left-text">Sobre</div> 
-				<div class="right-text">Mim</div>
+			<div class="title">
+				<div class="me-left-text">Sobre<twink3-element class="twink" color="#FF50BB" width="12vw" height="14vw" css="--t: 0s; --r: rotate(130deg); position: relative; max-width:120px; max-height:120px; transform: var(--r)"></twink3-element></div> 
+				<div class="me-right-text"><twink3-element class="twink" color="#E9008E" width="12vw" height="14vw" css="--t: 0s; --r: rotate(-50deg); position: relative; max-width:120px; max-height:120px; transform: var(--r)"></twink3-element>Mim</div>
 			</div>
 			<div class="about-text">
-				<p>Me chamo Natani Fedencio, sou estudante de marketing e adoro explorar como as marcas se conectam com as pessoas. Estou sempre antenada nas últimas tendências e em busca de formas criativas de aplicar o que aprendo. Gosto de pensar que o marketing é uma forma de transformar ideias em algo que realmente ressoe com o público. Estou ansiosa para colocar a teoria em prática e ganhar experiência com projetos reais e desafios do dia a dia.</p>
+				<p>Me chamo Natani Fedencio, sou estudante de <span class="highlight">marketing</span> e adoro <span class="highlight">explorar</span> como as marcas se conectam com as pessoas. Estou sempre antenada nas últimas <span class="highlight">tendências</span> e em busca de formas criativas de aplicar o que aprendo. Gosto de pensar que o marketing é uma forma de <span class="highlight">transformar</span> ideias em algo que realmente ressoe com o público. Estou ansiosa para colocar a teoria em prática e ganhar experiência com projetos reais e desafios do dia a dia.</p>
 			</div>
+
+			<a href="#contact"><div class="downArrow bounce light"><i class="fa-solid fa-chevron-down"></i></div></a>
 		</div>
-		<div class="container contact">
-			<h1>Contact</h1>
+		<div class="container" id="contact">
+			<div class="title text-center">
+				Entre<br/>
+				Em<br/>
+				Contato
+			</div>
+			<abs1-element width="40%" height="40%" style="left: -15%; top: -12%;"></abs1-element>
+			<twink3-element class="twink" id="rta" color="#E9008E" width="20%" height="20%" css="--t: 0s; --r: rotate(45deg); position: absolute; left: 20%; top: 34%; transform: var(--r)"></twink3-element>
+			<div class="contact-links">
+				<a id="click_whatsapp" target="_blank" href="https://api.whatsapp.com/send/?phone=554797608630&text&type=phone_number&app_absent=0"><div id="link-1" class="icon-link"><img class="icon" src="/svg/whatsapp.svg"/><br/>Whatsapp</div></a>
+				<a id="click_instagram" target="_blank" href="https://www.instagram.com/vhs_naty/"><div id="link-2" class="icon-link"><img class="icon" src="/svg/instagram.svg"/><br/>Instagram</div></a>
+				<abs2-element width="170%" height="170%" style="left: -24%; top: -33%;z-index: 3;"></abs2-element>
+			</div>
+            <abs1-element width="40%" height="40%" style="left: 70%; top: 75%; transform: rotate(-110deg);"></abs1-element>
 		</div>
 	</body>
 </html>
